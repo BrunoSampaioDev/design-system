@@ -25,4 +25,15 @@ export const colors = {
   Blue600: '#2B6CB0',
   Blue700: '#2C5282',
   Blue800: '#2A4365',
+
+  Red50: '#FFF5F5',
+  Red100: '#FED7D7',
+  Red200: '#FEB2B2',
+  Red300: '#FC8181',
+  Red400: '#F56565',
+  Red500: '#E53E3E',
+  Red600: '#C53030',
+  Red700: '#9B2C2C',
+  Red800: '#822727',
+  Red900: '#63171B',
 }
