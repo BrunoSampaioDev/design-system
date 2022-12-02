@@ -1,8 +1,12 @@
 import { colors } from '@simple-ui/tokens'
 import { getContrast } from 'polished'
 
+type Token = keyof typeof colors
+
+type TokensMap = Array<[Token, string]>
+
 interface ColorItemProps {
-  token: keyof typeof colors
+  token: Token
   hexaDecimalColor: string
 }
 
@@ -27,10 +31,8 @@ const ColorItem = ({ token, hexaDecimalColor }: ColorItemProps) => {
   )
 }
 
-type ColorsMapType = Array<[keyof typeof colors, string]>
-
 export const ColorsGrid = () => {
-  const COLORS_MAP = Object.entries(colors) as ColorsMapType
+  const COLORS_MAP = Object.entries(colors) as TokensMap
 
   return COLORS_MAP.map(([token, hexaDecimalColor]) => (
     <ColorItem key={token} token={token} hexaDecimalColor={hexaDecimalColor} />
