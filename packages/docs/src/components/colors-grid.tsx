@@ -2,15 +2,16 @@ import { colors } from '@simple-ui/tokens'
 import { getContrast } from 'polished'
 
 interface ColorItemProps {
-  renderKey: string
-  color: keyof typeof colors
+  token: keyof typeof colors
+  hexaDecimalColor: string
 }
 
-const ColorItem = ({ renderKey, color }: ColorItemProps) => {
-  const fontContrast = getContrast(color, '#fff') < 3.5 ? '#000' : '#fff'
+const ColorItem = ({ token, hexaDecimalColor }: ColorItemProps) => {
+  const fontContrast =
+    getContrast(hexaDecimalColor, '#fff') < 3.5 ? '#000' : '#fff'
 
   return (
-    <div style={{ backgroundColor: color, padding: '2rem' }}>
+    <div style={{ backgroundColor: hexaDecimalColor, padding: '2rem' }}>
       <div
         style={{
           display: 'flex',
@@ -19,21 +20,24 @@ const ColorItem = ({ renderKey, color }: ColorItemProps) => {
           color: fontContrast,
         }}
       >
-        <strong>${renderKey}</strong>
-        <span>{color}</span>
+        <strong>${token}</strong>
+        <span>{hexaDecimalColor}</span>
       </div>
     </div>
   )
 }
 
+type ColorsMapType = [[keyof typeof colors, string]]
+
 export const ColorsGrid = () => {
-  const COLORS_MAP = Object.entries(colors)
-  return COLORS_MAP.map(([key, color]) => {
+  const COLORS_MAP = Object.entries(colors) as ColorsMapType
+
+  return COLORS_MAP.map(([token, hexaDecimalColor]) => {
     return (
       <ColorItem
-        key={key}
-        renderKey={key}
-        color={color as keyof typeof colors}
+        key={token}
+        token={token}
+        hexaDecimalColor={hexaDecimalColor}
       />
     )
   })
