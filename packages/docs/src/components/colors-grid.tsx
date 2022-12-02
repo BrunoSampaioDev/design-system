@@ -27,7 +27,7 @@ const ColorItem = ({ token, hexaDecimalColor }: ColorItemProps) => {
   )
 }
 
-type ColorsMapType = [[keyof typeof colors, string]]
+type ColorsMapType = Array<[keyof typeof colors, string]>
 
 export const ColorsGrid = () => {
   const COLORS_MAP = Object.entries(colors) as ColorsMapType
