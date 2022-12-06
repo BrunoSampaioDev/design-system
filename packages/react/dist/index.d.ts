@@ -30,6 +30,16 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         Blue600: string;
         Blue700: string;
         Blue800: string;
+        Red50: string;
+        Red100: string;
+        Red200: string;
+        Red300: string;
+        Red400: string;
+        Red500: string;
+        Red600: string;
+        Red700: string;
+        Red800: string;
+        Red900: string;
     };
     fontSizes: {
         xxs: string;
@@ -66,21 +76,21 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         full: string;
     };
     space: {
-        1: string;
-        2: string;
-        3: string;
-        4: string;
-        5: string;
-        6: string;
-        7: string;
-        8: string;
-        10: string;
-        12: string;
-        16: string;
-        20: string;
-        40: string;
-        64: string;
-        80: string;
+        '1': string;
+        '2': string;
+        '3': string;
+        '4': string;
+        '5': string;
+        '6': string;
+        '7': string;
+        '8': string;
+        '10': string;
+        '12': string;
+        '16': string;
+        '20': string;
+        '40': string;
+        '64': string;
+        '80': string;
     };
     fonts: {
         default: string;
