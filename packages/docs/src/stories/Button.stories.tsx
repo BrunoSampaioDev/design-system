@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { Button, ButtonProps } from '@simple-ui/react'
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
 
   args: {
@@ -30,6 +30,6 @@ export const Primary: StoryObj<ButtonProps> = {
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
     variant: 'secondary',
-    size: 'big',
+    size: 'small',
   },
 }
